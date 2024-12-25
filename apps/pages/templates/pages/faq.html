@@ -1,7 +1,29 @@
-{% extends 'pages/layouts/base.html' %}
+{% extends "pages/layouts/base.html" %}
 {% load static %}
 
 {% block content %}
+<div class="breadcrumb-and-page-title health mb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="inner-page-breadcrumb-wrapper">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>FAQ’s</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="page-title-area" style="background-image: url({% static 'pages/image/health-wellness/banner-imh.png' %});">
+                    <div class="page-content">
+                        <h1>FAQ’s</h1>
+                        <p>Feel free to choose or modify any of these titles to match the specific focus and tone of your food blog. Whether you're sharing recipes,</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="faq-page-wrap mb-120">
     <div class="container">
         <div class="row justify-content-center g-lg-4 gy-5">

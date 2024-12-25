@@ -5,18 +5,17 @@
     {% include "pages/partials/head.html" %}
 </head>
 
-<body id="body">
-
+<body id="body" class="background-img">
     {% include "pages/partials/scroll.html" %}
     {% include "pages/partials/sidebar.html" %}
     {% include "pages/partials/header.html" %}
     {% include "pages/partials/banner.html" %}
-    {% include "pages/partials/discover.html" %}
+    {% include "pages/partials/add_area.html" %}
 
     {% block content %}
+    <!-- Code for content -->
     {% endblock %}
 
-    {% include "pages/partials/gallery.html" %}
     {% include "pages/partials/footer.html" %}
     {% include "pages/partials/scripts.html" %}
 </body>

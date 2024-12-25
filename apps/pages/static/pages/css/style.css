@@ -468,7 +468,7 @@ ul {
   margin: 0;
   padding: 0;
   background-color: #F4DCB1;
-  background-image: url(../image/health&wellness/flower-img.png);
+  background-image: url(../image/health-wellness/flower-img.png);
   background-repeat: no-repeat;
   background-position: 90% 13%;
 }
@@ -7302,7 +7302,7 @@ header.podcast .header-wrapper .icon-area .search-bar .search-input {
   background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
-  background-image: url(../image/health&wellness/shape-mask.png);
+  background-image: url(../image/health-wellness/shape-mask.png);
   background-position: left bottom;
 }
 .footer-section .footer-top {
