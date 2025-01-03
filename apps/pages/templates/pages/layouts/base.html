@@ -8,14 +8,15 @@
 <body id="body" class="background-img">
     {% include "pages/partials/scroll.html" %}
     {% include "pages/partials/sidebar.html" %}
-    {% include "pages/partials/header.html" %}
-    {% include "pages/partials/banner.html" %}
-    {% include "pages/partials/add_area.html" %}
+    {% include "pages/partials/topbar.html" %}
+    {% include "pages/partials/navbar.html" %}
+    {% include "pages/partials/slider.html" %}
+    {% include "pages/partials/ads.html" %}
 
     {% block content %}
-    <!-- Code for content -->
     {% endblock %}
 
+    {% include "pages/partials/gallery.html" %}
     {% include "pages/partials/footer.html" %}
     {% include "pages/partials/scripts.html" %}
 </body>
