@@ -6,7 +6,7 @@
     <div class="container">
         <div class="inner-page-breadcrumb-wrapper">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
                 <li>Terms & Conditions</li>
             </ul>
         </div>
@@ -85,33 +85,33 @@
                         <h6>Trending Post</h6>
                         <div class="recent-post-widget mb-30">
                             <div class="recent-post-img">
-                                <a href="standard-formate.html"><img src="{% static 'pages/image/health&amp;wellness/image-(17).png' %}" alt=""></a>
+                                <a href="{% url 'standard-formate' %}"><img src="{% static 'pages/image/health&amp;wellness/image-(17).png' %}" alt=""></a>
                             </div>
                             <div class="recent-post-content">
-                                <a href="health-and-wellness-category.html">05 January, 2024</a>
-                                <h5><a href="standard-formate.html">Mental Health Matters Breaking the Stigma.</a></h5>
+                                <a href="{% url 'health-and-wellness-category' %}">05 January, 2024</a>
+                                <h5><a href="{% url 'standard-formate' %}">Mental Health Matters Breaking the Stigma.</a></h5>
                             </div>
                         </div>
                         <div class="recent-post-widget mb-30">
                             <div class="recent-post-img">
-                                <a href="standard-formate.html"><img src="{% static 'pages/image/health&amp;wellness/sidber-img-2.png' %}" alt=""></a>
+                                <a href="{% url 'standard-formate' %}"><img src="{% static 'pages/image/health&amp;wellness/sidber-img-2.png' %}" alt=""></a>
                             </div>
                             <div class="recent-post-content">
-                                <a href="health-and-wellness-category.html">05 January, 2024</a>
-                                <h5><a href="standard-formate.html">Harnessing the Power of the Presen.</a></h5>
+                                <a href="{% url 'health-and-wellness-category' %}">05 January, 2024</a>
+                                <h5><a href="{% url 'standard-formate' %}">Harnessing the Power of the Presen.</a></h5>
                             </div>
                         </div>
                         <div class="recent-post-widget ">
                             <div class="recent-post-img">
-                                <a href="standard-formate.html"><img src="{% static 'pages/image/health&amp;wellness/sidber-img-3.png' %}" alt=""></a>
+                                <a href="{% url 'standard-formate' %}"><img src="{% static 'pages/image/health&amp;wellness/sidber-img-3.png' %}" alt=""></a>
                             </div>
                             <div class="recent-post-content">
-                                <a href="health-and-wellness-category.html">05 January, 2024</a>
-                                <h5><a href="standard-formate.html">A Guide to Better Sleep Habits.</a></h5>
+                                <a href="{% url 'health-and-wellness-category' %}">05 January, 2024</a>
+                                <h5><a href="{% url 'standard-formate' %}">A Guide to Better Sleep Habits.</a></h5>
                             </div>
                         </div>
                         <div class="view-all-btn">
-                            <a href="health-and-wellness-category.html" class="view-btn">
+                            <a href="{% url 'health-and-wellness-category' %}" class="view-btn">
                                 View All
                                 <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="white" stroke-width="1.5" stroke-linecap="round" />
@@ -124,16 +124,16 @@
                     <div class="sidebar-widget about-section">
                         <ul class="category">
                             <li>
-                                <a href="about-us.html">About Us</a>
+                                <a href="{% url 'about-us' %}">About Us</a>
                             </li>
                             <li>
-                                <a href="terms&amp;condition.html">Terms &amp; Conditions</a>
+                                <a href="{% url 'terms-condition' %}">Terms &amp; Conditions</a>
                             </li>
                             <li>
-                                <a href="terms&amp;condition.html#">Support</a>
+                                <a href="{% url 'terms-condition' %}">Support</a>
                             </li>
                             <li>
-                                <a href="privacy-policy.html">Privacy Policy</a>
+                                <a href="{% url 'privacy-policy' %}">Privacy Policy</a>
                             </li>
                         </ul>
                     </div>

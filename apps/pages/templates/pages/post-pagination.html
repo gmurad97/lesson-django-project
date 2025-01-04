@@ -6,8 +6,8 @@
     <div class="container">
         <div class="inner-page-breadcrumb-wrapper mb-20">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="https://demo-egenslab.b-cdn.net/html/zorik/preview/health-and-wellness/gaming.html">Gaming</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="https://demo-egenslab.b-cdn.net/html/zorik/preview/health-and-wellness/gaming">Gaming</a></li>
                 <li>Console Connoisseur: Unveiling Gaming Wonders</li>
             </ul>
         </div>
@@ -21,10 +21,10 @@
                 <div class="banner-content">
                     <ul class="blog-meta">
                         <li>
-                            <a href="editor-profile.html">Jasmine Quinn</a>
+                            <a href="{% url 'editor-profile' %}">Jasmine Quinn</a>
                         </li>
                         <li>
-                            <a class="publish-date" href="health-and-wellness-category.html">01 Feb, 2024</a>
+                            <a class="publish-date" href="{% url 'health-and-wellness-category' %}">01 Feb, 2024</a>
                         </li>
                     </ul>
                     <span class="line-break"></span>
@@ -41,7 +41,7 @@
                             <span class="line-break2"></span>
                             <p class="unique-text">It is a gaming concept that invites players to embark on a
                                 journey through the
-                                history of video game consoles, uncovering the wonders and <a href="post-pagination.html#">Innovations</a> that have
+                                history of video game consoles, uncovering the wonders and <a href="{% url 'post-pagination' %}">Innovations</a> that have
                                 shaped the gaming industry.</p>
                             <span class="line-break2"></span>
                             <p class="unique-text">They must acquire rare and unique consoles, artifacts, and
@@ -88,7 +88,7 @@
                             <span class="line-break2"></span>
                             <span class="line-break2"></span>
                             <blockquote class="blockquote-three">
-                                <p>In this game, players take on the role of a curator of a <a href="post-pagination.html#">Virtual
+                                <p>In this game, players take on the role of a curator of a <a href="{% url 'post-pagination' %}">Virtual
                                         Museum</a> dedicated
                                     to video game consoles, tasked with collecting, preserving, and showcasing the
                                     most iconic and influential consoles of all time.</p>
@@ -113,13 +113,13 @@
                     <div class="col-lg-10">
                         <div class="blog-content2">
                             <span class="line-break"></span>
-                            <p class="hover-text">Everyone has a story to tell in the world of <a href="post-pagination.html#">"Chronicle Controller."</a></p>
+                            <p class="hover-text">Everyone has a story to tell in the world of <a href="{% url 'post-pagination' %}">"Chronicle Controller."</a></p>
                             <span class="line-break3"></span>
                             <span class="line-break3"></span>
                             <span class="line-break3"></span>
                             <h3>Content Creation Tools</h3>
                             <span class="line-break3"></span>
-                            <p>Overall,<a class="mark-text" href="post-pagination.html#"><mark> "Chronicle Controller: Tales of Gaming Triumphs"
+                            <p>Overall,<a class="mark-text" href="{% url 'post-pagination' %}"><mark> "Chronicle Controller: Tales of Gaming Triumphs"
                                     </mark></a> is more than just a game – it's a platform where players can come together to celebrate their shared love of gaming, share their stories of triumph, and inspire others to create their own gaming legends.</p>
                             <span class="line-break3"></span>
                             <span class="line-break3"></span>
@@ -137,9 +137,9 @@
                     <div class="tag-items">
                         <h6>Categorized:</h6>
                         <ul>
-                            <li><a href="health-and-wellness-category.html">Gaming Tips,</a></li>
-                            <li><a href="health-and-wellness-category.html">Competition,</a></li>
-                            <li><a href="health-and-wellness-category.html">Chanllenge</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">Gaming Tips,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">Competition,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">Chanllenge</a></li>
                         </ul>
                     </div>
                 </div>
@@ -151,13 +151,13 @@
                             <h6>Page:</h6>
                             <ul class="paginations">
                                 <li class="page-item active">
-                                    <a href="post-pagination.html#">01</a>
+                                    <a href="{% url 'post-pagination' %}">01</a>
                                 </li>
                                 <li class="page-item">
-                                    <a href="post-pagination.html#">02</a>
+                                    <a href="{% url 'post-pagination' %}">02</a>
                                 </li>
                                 <li class="page-item">
-                                    <a href="post-pagination.html#">03</a>
+                                    <a href="{% url 'post-pagination' %}">03</a>
                                 </li>
                             </ul>
                         </div>
@@ -167,14 +167,14 @@
                 <span class="line-break3"></span>
                 <div class="post-btn">
                     <div class="privious-post-btn">
-                        <a href="post-pagination.html#">
+                        <a href="{% url 'post-pagination' %}">
                             <svg class="arrow" width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10 10L1 1M1 1C3 1.375 7.375 2.125 10 1M1 1C1.375 2.875 2.125 7 1 10" stroke="white" stroke-width="1.5" stroke-linecap="round" />
                             </svg>
                             PREVIOUS POST</a>
                     </div>
                     <div class="next-post-btn">
-                        <a href="post-pagination.html#">
+                        <a href="{% url 'post-pagination' %}">
                             <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="#191919" stroke-width="1.5" stroke-linecap="round"></path>
                             </svg>
@@ -273,12 +273,12 @@
                             <div class="blog-area">
                                 <div class="blog-card">
                                     <div class="blog-content-1">
-                                        <span><a href="health-and-wellness-category.html">Wellness</a></span>
-                                        <h5><a href="health-and-wellness-category.html">02 January, 2024</a></h5>
-                                        <h3><a href="standard-formate.html">Exploring the Path to Vibrant Living.</a></h3>
+                                        <span><a href="{% url 'health-and-wellness-category' %}">Wellness</a></span>
+                                        <h5><a href="{% url 'health-and-wellness-category' %}">02 January, 2024</a></h5>
+                                        <h3><a href="{% url 'standard-formate' %}">Exploring the Path to Vibrant Living.</a></h3>
                                     </div>
                                     <div class="blog-image">
-                                        <a href="standard-formate.html"> <img class="img-fluid" src="{% static 'pages/image/health-wellness/Image-67.png' %}" alt=""></a>
+                                        <a href="{% url 'standard-formate' %}"> <img class="img-fluid" src="{% static 'pages/image/health-wellness/Image-67.png' %}" alt=""></a>
                                     </div>
                                     <div class="blog-bottom-content">
                                         <div class="blog-author">
@@ -286,11 +286,11 @@
                                                 <img src="{% static 'pages/image/health-wellness/Image-10.png' %}" alt="">
                                             </div>
                                             <div class="author-name">
-                                                <a href="editor-profile.html">Dr. Daniel Scoot</a>
+                                                <a href="{% url 'editor-profile' %}">Dr. Daniel Scoot</a>
                                             </div>
                                         </div>
                                         <div class="blog-btn">
-                                            <a href="standard-formate.html">
+                                            <a href="{% url 'standard-formate' %}">
                                                 View
                                                 <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="white" stroke-width="1.5" stroke-linecap="round" />
@@ -305,12 +305,12 @@
                             <div class="blog-area">
                                 <div class="blog-card tea-Green">
                                     <div class="blog-content-1">
-                                        <span><a href="health-and-wellness-category.html">Nutrition</a></span>
-                                        <h5><a href="health-and-wellness-category.html">04 January, 2024</a></h5>
-                                        <h3><a href="standard-formate.html">Nutritious and Delicious Recipes.</a></h3>
+                                        <span><a href="{% url 'health-and-wellness-category' %}">Nutrition</a></span>
+                                        <h5><a href="{% url 'health-and-wellness-category' %}">04 January, 2024</a></h5>
+                                        <h3><a href="{% url 'standard-formate' %}">Nutritious and Delicious Recipes.</a></h3>
                                     </div>
                                     <div class="blog-image">
-                                        <a href="standard-formate.html"> <img class="img-fluid" src="{% static 'pages/image/health-wellness/Image-13.png' %}" alt=""></a>
+                                        <a href="{% url 'standard-formate' %}"> <img class="img-fluid" src="{% static 'pages/image/health-wellness/Image-13.png' %}" alt=""></a>
                                     </div>
                                     <div class="blog-bottom-content">
                                         <div class="blog-author">
@@ -318,11 +318,11 @@
                                                 <img src="{% static 'pages/image/health-wellness/Image-10.png' %}" alt="">
                                             </div>
                                             <div class="author-name">
-                                                <a href="editor-profile.html">Dr. Robertson</a>
+                                                <a href="{% url 'editor-profile' %}">Dr. Robertson</a>
                                             </div>
                                         </div>
                                         <div class="blog-btn">
-                                            <a href="standard-formate.html">
+                                            <a href="{% url 'standard-formate' %}">
                                                 View
                                                 <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="white" stroke-width="1.5" stroke-linecap="round" />
@@ -337,12 +337,12 @@
                             <div class="blog-area">
                                 <div class="blog-card linen">
                                     <div class="blog-content-1">
-                                        <span><a href="health-and-wellness-category.html">Hygiene</a></span>
-                                        <h5><a href="health-and-wellness-category.html">05 January, 2024</a></h5>
-                                        <h3><a href="standard-formate.html">Tips for a Healthy Hygiene Routine.</a></h3>
+                                        <span><a href="{% url 'health-and-wellness-category' %}">Hygiene</a></span>
+                                        <h5><a href="{% url 'health-and-wellness-category' %}">05 January, 2024</a></h5>
+                                        <h3><a href="{% url 'standard-formate' %}">Tips for a Healthy Hygiene Routine.</a></h3>
                                     </div>
                                     <div class="blog-image">
-                                        <a href="standard-formate.html"> <img src="{% static 'pages/image/health-wellness/Image-12.png' %}" alt=""></a>
+                                        <a href="{% url 'standard-formate' %}"> <img src="{% static 'pages/image/health-wellness/Image-12.png' %}" alt=""></a>
                                     </div>
                                     <div class="blog-bottom-content">
                                         <div class="blog-author">
@@ -350,11 +350,11 @@
                                                 <img src="{% static 'pages/image/health-wellness/Image-10.png' %}" alt="">
                                             </div>
                                             <div class="author-name">
-                                                <a href="editor-profile.html">Dr. Daniel Scoot</a>
+                                                <a href="{% url 'editor-profile' %}">Dr. Daniel Scoot</a>
                                             </div>
                                         </div>
                                         <div class="blog-btn">
-                                            <a href="standard-formate.html">
+                                            <a href="{% url 'standard-formate' %}">
                                                 View
                                                 <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="white" stroke-width="1.5" stroke-linecap="round" />
@@ -369,12 +369,12 @@
                             <div class="blog-area">
                                 <div class="blog-card canary-yellow">
                                     <div class="blog-content-1">
-                                        <span><a href="health-and-wellness-category.html">Self-Care</a></span>
-                                        <h5><a href="health-and-wellness-category.html">06 January, 2024</a></h5>
-                                        <h3><a href="standard-formate.html">Nurturing Your Mind, Body, and Soul.</a></h3>
+                                        <span><a href="{% url 'health-and-wellness-category' %}">Self-Care</a></span>
+                                        <h5><a href="{% url 'health-and-wellness-category' %}">06 January, 2024</a></h5>
+                                        <h3><a href="{% url 'standard-formate' %}">Nurturing Your Mind, Body, and Soul.</a></h3>
                                     </div>
                                     <div class="blog-image">
-                                        <a href="standard-formate.html"> <img src="{% static 'pages/image/health-wellness/Image-14.png' %}" alt=""></a>
+                                        <a href="{% url 'standard-formate' %}"> <img src="{% static 'pages/image/health-wellness/Image-14.png' %}" alt=""></a>
                                     </div>
                                     <div class="blog-bottom-content">
                                         <div class="blog-author">
@@ -382,11 +382,11 @@
                                                 <img src="{% static 'pages/image/health-wellness/Image-10.png' %}" alt="">
                                             </div>
                                             <div class="author-name">
-                                                <a href="editor-profile.html">Dr. Emusion Hey</a>
+                                                <a href="{% url 'editor-profile' %}">Dr. Emusion Hey</a>
                                             </div>
                                         </div>
                                         <div class="blog-btn">
-                                            <a href="standard-formate.html">
+                                            <a href="{% url 'standard-formate' %}">
                                                 View
                                                 <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="white" stroke-width="1.5" stroke-linecap="round" />
@@ -539,33 +539,33 @@
                         <h6>Trending Post</h6>
                         <div class="recent-post-widget mb-30">
                             <div class="recent-post-img">
-                                <a href="standard-formate.html"><img src="{% static 'pages/image/health-wellness/image-(17).png' %}" alt=""></a>
+                                <a href="{% url 'standard-formate' %}"><img src="{% static 'pages/image/health-wellness/image-(17).png' %}" alt=""></a>
                             </div>
                             <div class="recent-post-content">
-                                <a href="health-and-wellness-category.html">05 January, 2024</a>
-                                <h5><a href="standard-formate.html">Mental Health Matters Breaking the Stigma.</a></h5>
+                                <a href="{% url 'health-and-wellness-category' %}">05 January, 2024</a>
+                                <h5><a href="{% url 'standard-formate' %}">Mental Health Matters Breaking the Stigma.</a></h5>
                             </div>
                         </div>
                         <div class="recent-post-widget mb-30">
                             <div class="recent-post-img">
-                                <a href="standard-formate.html"><img src="{% static 'pages/image/health-wellness/sidber-img-2.png' %}" alt=""></a>
+                                <a href="{% url 'standard-formate' %}"><img src="{% static 'pages/image/health-wellness/sidber-img-2.png' %}" alt=""></a>
                             </div>
                             <div class="recent-post-content">
-                                <a href="health-and-wellness-category.html">05 January, 2024</a>
-                                <h5><a href="standard-formate.html">Harnessing the Power of the Presen.</a></h5>
+                                <a href="{% url 'health-and-wellness-category' %}">05 January, 2024</a>
+                                <h5><a href="{% url 'standard-formate' %}">Harnessing the Power of the Presen.</a></h5>
                             </div>
                         </div>
                         <div class="recent-post-widget ">
                             <div class="recent-post-img">
-                                <a href="standard-formate.html"><img src="{% static 'pages/image/health-wellness/sidber-img-3.png' %}" alt=""></a>
+                                <a href="{% url 'standard-formate' %}"><img src="{% static 'pages/image/health-wellness/sidber-img-3.png' %}" alt=""></a>
                             </div>
                             <div class="recent-post-content">
-                                <a href="health-and-wellness-category.html">05 January, 2024</a>
-                                <h5><a href="standard-formate.html">A Guide to Better Sleep Habits.</a></h5>
+                                <a href="{% url 'health-and-wellness-category' %}">05 January, 2024</a>
+                                <h5><a href="{% url 'standard-formate' %}">A Guide to Better Sleep Habits.</a></h5>
                             </div>
                         </div>
                         <div class="view-all-btn">
-                            <a href="health-and-wellness-category.html" class="view-btn">
+                            <a href="{% url 'health-and-wellness-category' %}" class="view-btn">
                                 View All
                                 <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="white" stroke-width="1.5" stroke-linecap="round" />
@@ -577,47 +577,47 @@
                         <h6>Category</h6>
                         <ul class="category">
                             <li>
-                                <a href="health-and-wellness-category.html">Life Fitness (02)</a>
+                                <a href="{% url 'health-and-wellness-category' %}">Life Fitness (02)</a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">Nutrition (05)</a>
+                                <a href="{% url 'health-and-wellness-category' %}">Nutrition (05)</a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">Self Care (03)</a>
+                                <a href="{% url 'health-and-wellness-category' %}">Self Care (03)</a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">Meditation (04)</a>
+                                <a href="{% url 'health-and-wellness-category' %}">Meditation (04)</a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">Disease (03)</a>
+                                <a href="{% url 'health-and-wellness-category' %}">Disease (03)</a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">Mental Health (04)</a>
+                                <a href="{% url 'health-and-wellness-category' %}">Mental Health (04)</a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">Wellness (04)</a>
+                                <a href="{% url 'health-and-wellness-category' %}">Wellness (04)</a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">Hygiene (07)</a>
+                                <a href="{% url 'health-and-wellness-category' %}">Hygiene (07)</a>
                             </li>
                         </ul>
                     </div>
                     <div class="single-widget aero-blue mb-30">
                         <h6>Popular Tags</h6>
                         <ul class="popular-tag">
-                            <li><a href="health-and-wellness-category.html">#Fitness,</a></li>
-                            <li><a href="health-and-wellness-category.html">#Nutrition,</a></li>
-                            <li><a href="health-and-wellness-category.html">#Meditation,</a></li>
-                            <li><a href="health-and-wellness-category.html">#Wellness,</a></li>
-                            <li><a href="health-and-wellness-category.html">#Life Style,</a></li>
-                            <li><a href="health-and-wellness-category.html">#Health,</a></li>
-                            <li><a href="health-and-wellness-category.html">#Mental Health,</a></li>
-                            <li><a href="health-and-wellness-category.html">#Hygiene,</a></li>
-                            <li><a href="health-and-wellness-category.html">#Exercise,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">#Fitness,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">#Nutrition,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">#Meditation,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">#Wellness,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">#Life Style,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">#Health,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">#Mental Health,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">#Hygiene,</a></li>
+                            <li><a href="{% url 'health-and-wellness-category' %}">#Exercise,</a></li>
                         </ul>
                     </div>
                     <div class="single-widget-add">
-                        <a href="post-pagination.html#"><img src="{% static 'pages/image/health-wellness/Group-27.png' %}" alt=""></a>
+                        <a href="{% url 'post-pagination' %}"><img src="{% static 'pages/image/health-wellness/Group-27.png' %}" alt=""></a>
                     </div>
                 </div>
             </div>

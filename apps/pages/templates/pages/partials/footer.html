@@ -7,8 +7,8 @@
                     <div class="footer-top-content">
                         <div class="footer-logo">
                             <div class="footer-logo">
-                                <a href="index.html"><img alt="image" class="img-fluid dark" src="{% static 'pages/image/index-img/icon/dark-logo.svg' %}"></a>
-                                <a href="index.html"><img alt="image" class="img-fluid light" src="{% static 'pages/image/index-img/icon/light-logo.svg' %}"></a>
+                                <a href="{% url 'index' %}"><img alt="image" class="img-fluid dark" src="{% static 'pages/image/index-img/icon/dark-logo.svg' %}"></a>
+                                <a href="{% url 'index' %}"><img alt="image" class="img-fluid light" src="{% static 'pages/image/index-img/icon/light-logo.svg' %}"></a>
                             </div>
                             <p>Welcome! Feel free to mix and match these subcategories based on your interests and
                                 the preferences of your target audience. Health & Wellness is a diverse niche.</p>
@@ -101,7 +101,7 @@
                         </div>
                         <ul class="widget-list">
                             <li>
-                                <a href="health-and-wellness-category.html">
+                                <a href="{% url 'health-and-wellness-category' %}">
                                     Life Fitness
                                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="#191919" stroke-width="1.5" stroke-linecap="round" />
@@ -109,7 +109,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">
+                                <a href="{% url 'health-and-wellness-category' %}">
                                     Nutrition
                                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="#191919" stroke-width="1.5" stroke-linecap="round" />
@@ -117,7 +117,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">
+                                <a href="{% url 'health-and-wellness-category' %}">
                                     Self Care
                                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="#191919" stroke-width="1.5" stroke-linecap="round" />
@@ -125,7 +125,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">
+                                <a href="{% url 'health-and-wellness-category' %}">
                                     Meditation
                                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="#191919" stroke-width="1.5" stroke-linecap="round" />
@@ -133,7 +133,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">
+                                <a href="{% url 'health-and-wellness-category' %}">
                                     Disease
                                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="#191919" stroke-width="1.5" stroke-linecap="round" />
@@ -141,7 +141,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">
+                                <a href="{% url 'health-and-wellness-category' %}">
                                     Mental Health
                                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="#191919" stroke-width="1.5" stroke-linecap="round" />
@@ -149,7 +149,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="health-and-wellness-category.html">
+                                <a href="{% url 'health-and-wellness-category' %}">
                                     Wellness
                                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="#191919" stroke-width="1.5" stroke-linecap="round" />
@@ -167,34 +167,34 @@
                         <ul>
                             <li>
                                 <div class="img-section">
-                                    <a href="standard-formate.html" class="gallery-img">
+                                    <a href="{% url 'standard-formate' %}" class="gallery-img">
                                         <img src="{% static 'pages/image/health-wellness/fitsum-admasu-oGv9xIl7DkY-unsplash.png' %}" alt="">
                                     </a>
                                     <div class="img-content">
-                                        <a href="health-and-wellness-category.html">02 January, 2024</a>
-                                        <h6><a href="standard-formate.html">Mental Health Matters Breaking the Stigma.</a></h6>
+                                        <a href="{% url 'health-and-wellness-category' %}">02 January, 2024</a>
+                                        <h6><a href="{% url 'standard-formate' %}">Mental Health Matters Breaking the Stigma.</a></h6>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="img-section">
-                                    <a href="standard-formate.html" class="gallery-img">
+                                    <a href="{% url 'standard-formate' %}" class="gallery-img">
                                         <img src="{% static 'pages/image/health-wellness/image-(19).png' %}" alt="">
                                     </a>
                                     <div class="img-content">
-                                        <a href="health-and-wellness-category.html">04 January, 2024</a>
-                                        <h6><a href="standard-formate.html">Empowering Knowledge for Better Health.</a></h6>
+                                        <a href="{% url 'health-and-wellness-category' %}">04 January, 2024</a>
+                                        <h6><a href="{% url 'standard-formate' %}">Empowering Knowledge for Better Health.</a></h6>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="img-section">
-                                    <a href="standard-formate.html" class="gallery-img">
+                                    <a href="{% url 'standard-formate' %}" class="gallery-img">
                                         <img src="{% static 'pages/image/health-wellness/image-(23).png' %}" alt="">
                                     </a>
                                     <div class="img-content">
-                                        <a href="health-and-wellness-category.html">06 January, 2024</a>
-                                        <h6><a href="standard-formate.html">A Guide to Better Sleep Habits.</a></h6>
+                                        <a href="{% url 'health-and-wellness-category' %}">06 January, 2024</a>
+                                        <h6><a href="{% url 'standard-formate' %}">A Guide to Better Sleep Habits.</a></h6>
                                     </div>
                                 </div>
                             </li>
@@ -209,34 +209,34 @@
                         <ul>
                             <li>
                                 <div class="img-section">
-                                    <a href="standard-formate.html" class="gallery-img">
+                                    <a href="{% url 'standard-formate' %}" class="gallery-img">
                                         <img src="{% static 'pages/image/health-wellness/image-(20).png' %}" alt="">
                                     </a>
                                     <div class="img-content">
-                                        <a href="health-and-wellness-category.html">02 January, 2024</a>
-                                        <h6><a href="health-and-wellness-category.html">Meditation Practices for Emotional Well-Being.</a></h6>
+                                        <a href="{% url 'health-and-wellness-category' %}">02 January, 2024</a>
+                                        <h6><a href="{% url 'health-and-wellness-category' %}">Meditation Practices for Emotional Well-Being.</a></h6>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="img-section">
-                                    <a href="standard-formate.html" class="gallery-img">
+                                    <a href="{% url 'standard-formate' %}" class="gallery-img">
                                         <img src="{% static 'pages/image/health-wellness/image-(21).png' %}" alt="">
                                     </a>
                                     <div class="img-content">
-                                        <a href="health-and-wellness-category.html">04 January, 2024</a>
-                                        <h6><a href="standard-formate.html">The Art and Science of Meditation.</a></h6>
+                                        <a href="{% url 'health-and-wellness-category' %}">04 January, 2024</a>
+                                        <h6><a href="{% url 'standard-formate' %}">The Art and Science of Meditation.</a></h6>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="img-section">
-                                    <a href="standard-formate.html" class="gallery-img">
+                                    <a href="{% url 'standard-formate' %}" class="gallery-img">
                                         <img src="{% static 'pages/image/health-wellness/image-(22).png' %}" alt="">
                                     </a>
                                     <div class="img-content">
-                                        <a href="health-and-wellness-category.html">06 January, 2024</a>
-                                        <h6><a href="standard-formate.html">Harnessing the Power of the Presen.</a></h6>
+                                        <a href="{% url 'health-and-wellness-category' %}">06 January, 2024</a>
+                                        <h6><a href="{% url 'standard-formate' %}">Harnessing the Power of the Presen.</a></h6>
                                     </div>
                                 </div>
                             </li>
@@ -249,7 +249,7 @@
     <div class="container">
         <div class="footer-btm">
             <div class="copyright-area">
-                <p> &copy; Copyright 2024 <a href="index.html"> Zorik </a> | Design By <a href="https://www.egenstheme.com/">EGENS THEME</a></p>
+                <p> &copy; Copyright 2024 <a href="{% url 'index' %}"> Zorik </a> | Design By <a href="https://www.egenstheme.com/">EGENS THEME</a></p>
             </div>
             <div class="right-area">
                 <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -258,7 +258,7 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3988 1C11.558 1 11.7106 1.06585 11.8231 1.18306C11.9356 1.30027 11.9989 1.45924 11.9989 1.625V10.375C11.9989 10.5408 11.9356 10.6997 11.8231 10.8169C11.7106 10.9342 11.558 11 11.3988 11C11.2397 11 11.0871 10.9342 10.9746 10.8169C10.862 10.6997 10.7988 10.5408 10.7988 10.375V1.625C10.7988 1.45924 10.862 1.30027 10.9746 1.18306C11.0871 1.06585 11.2397 1 11.3988 1Z" />
                     </g>
                 </svg>
-                <p>Our <a href="privacy-policy.html">Privacy Policy</a>, <a href="terms-condition.html">Terms & Condition</a></p>
+                <p>Our <a href="{% url 'privacy-policy' %}">Privacy Policy</a>, <a href="{% url 'terms-condition' %}">Terms & Condition</a></p>
             </div>
         </div>
     </div>
