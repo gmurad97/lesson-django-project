@@ -1,4 +1,3 @@
-{{"<!-- GMURAD97 - It's so EASY!!! -->"}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,16 +10,12 @@
     {% include "pages/partials/sidebar.html" %}
     {% include "pages/partials/topbar.html" %}
     {% include "pages/partials/navbar.html" %}
-
-    {% if not is_404 %}
-    {% include "pages/partials/slider.html" %}
+    {% include "pages/partials/banner.html" %}
     {% include "pages/partials/ads.html" %}
-    {% endif %}
 
     {% block content %}
     {% endblock %}
 
-    {% include "pages/partials/gallery.html" %}
     {% include "pages/partials/footer.html" %}
     {% include "pages/partials/scripts.html" %}
 </body>
