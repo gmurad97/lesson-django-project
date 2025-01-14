@@ -10,12 +10,17 @@
     {% include "pages/partials/sidebar.html" %}
     {% include "pages/partials/topbar.html" %}
     {% include "pages/partials/navbar.html" %}
-    {% include "pages/partials/banner.html" %}
-    {% include "pages/partials/ads.html" %}
+
+    {% if not error %}
+        {% include "pages/partials/banner.html" %}
+        {% include "pages/partials/ads.html" %}
+        {% include "pages/partials/breadcrumb.html" %}
+    {% endif %}
 
     {% block content %}
     {% endblock %}
 
+    {% include "pages/partials/gallery.html" %}
     {% include "pages/partials/footer.html" %}
     {% include "pages/partials/scripts.html" %}
 </body>
