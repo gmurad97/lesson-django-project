@@ -56,7 +56,6 @@ def contact_us(request):
     context = {
         "page_name": "Contact Us",
     }
-
     return render(request, "pages/contact_us.html", context)
 
 
@@ -180,8 +179,5 @@ def life_style(request):
 
 
 def error_404(request, exception):
-    context = {
-        "page_name": "Page Not Found",
-        "error":True
-    }
+    context = {"page_name": "Page Not Found", "error": True}
     return render(request, "pages/error.html", context, status=404)
