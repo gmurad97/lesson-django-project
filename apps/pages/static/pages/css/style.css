@@ -468,7 +468,7 @@ ul {
   margin: 0;
   padding: 0;
   background-color: #F4DCB1;
-  background-image: url(../image/health&wellness/flower-img.png);
+  background-image: url(../image/health-wellness/flower-img.png);
   background-repeat: no-repeat;
   background-position: 90% 13%;
 }
@@ -7302,7 +7302,7 @@ header.podcast .header-wrapper .icon-area .search-bar .search-input {
   background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
-  background-image: url(../image/health&wellness/shape-mask.png);
+  background-image: url(../image/health-wellness/shape-mask.png);
   background-position: left bottom;
 }
 .footer-section .footer-top {
@@ -10167,7 +10167,7 @@ header.podcast .header-wrapper .icon-area .search-bar .search-input {
   position: relative;
 }
 .pet-sidebar-area .single-widget .pet-sports-content a img {
-  background: url(https://demo-egenslab.b-cdn.net/html/zorik/preview/assets/image/Image-44.png);
+  background: url(https://demo.egenslab.com/html/zorik/preview/assets/image/Image-44.png);
   border-radius: 10px;
 }
 .pet-sidebar-area .single-widget .pet-sports-content .img-content {
