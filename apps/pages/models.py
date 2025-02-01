@@ -6,6 +6,7 @@ from django.urls import reverse
 
 class Category(models.Model):
     name = models.CharField(max_length=80, unique=True, verbose_name="Title")
+    image = models.ImageField(upload_to="categories/", default="categories/default.png")
     status = models.BooleanField(default=True, verbose_name="Status")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Created At")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Updated At")
@@ -26,7 +27,11 @@ class Article(models.Model):
     title = models.CharField(max_length=255, verbose_name="Title")
     description = models.TextField(verbose_name="Description")
     image = models.ImageField(
-        upload_to="articles/%Y/%m/%d/", null=True, blank=True, verbose_name="Image"
+        upload_to="articles/%Y/%m/%d/",
+        null=True,
+        blank=True,
+        verbose_name="Image",
+        default="articles/default.jpg",
     )
     category = models.ForeignKey(
         Category,

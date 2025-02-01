@@ -18,12 +18,13 @@
         <li><a href="{% url 'index' %}">Home</a></li>
         <li><a href="{% url 'articles' %}">News</a></li>
         <li class="menu-item-has-children">
-            <a href="javascript:void(0);" class="drop-down">Categories</a>
+            <a href="{% url 'categories' %}" class="drop-down">Categories</a>
             <i class="bi bi-plus dropdown-icon"></i>
             <ul class="sub-menu">
-                {% for category in categories %}
+                {% for category in categories_last %}
                 <li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
                 {% endfor %}
+                <li><a href="{% url 'categories' %}">All categories</a></li>
             </ul>
         </li>
         <li><a href="{% url 'faq' %}">FAQ</a></li>

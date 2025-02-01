@@ -1,43 +1,62 @@
+from django.http import Http404
 from django.shortcuts import render
-from .models import Category
+from .models import Category, Article
 
 # Create your views here.
 
-# Success
+
 def index(request):
     context = {
         "page_title": "Home",
-        "categories": Category.objects.all(),
+        "categories_last": Category.objects.all()[:5],
+        "articles": Article.objects.all()[:9],
     }
     return render(request, "pages/index.html", context)
 
 
 def categories(request):
     context = {
-        "page_title": "",
+        "page_title": "Categories",
+        "categories_last": Category.objects.all()[:5],
+        "categories": Category.objects.all(),
+        "hide_slider": True,
     }
-    return render(request, "pages/.html", context)
+    return render(request, "pages/categories.html", context)
 
 
 def category(request, pk):
+    current_category = Category.objects.get(pk=pk)
     context = {
-        "page_title": "",
+        "page_title": f"Category {current_category.name}",
+        "categories_last": Category.objects.all()[:5],
+        "current_category": current_category,
+        "articles": Article.objects.filter(category__pk=pk),
+        "hide_slider": True,
     }
-    return render(request, "pages/.html", context)
+    if context["articles"].exists():
+        return render(request, "pages/category_articles.html", context)
+    else:
+        raise Http404()
 
 
 def articles(request):
     context = {
-        "page_title": "",
+        "page_title": "News",
+        "categories_last": Category.objects.all()[:5],
+        "articles": Article.objects.all(),
     }
-    return render(request, "pages/.html", context)
+    return render(request, "pages/articles.html", context)
 
 
 def article(request, pk):
+    current_article = Article.objects.get(pk=pk)
     context = {
-        "page_title": "",
+        "page_title": f"News - {current_article}",
+        "categories_last": Category.objects.all()[:5],
+        "current_article": current_article,
+        "hide_slider": True,
     }
-    return render(request, "pages/.html", context)
+    return render(request, "pages/article.html", context)
 
 
 # Success
