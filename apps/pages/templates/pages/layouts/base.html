@@ -10,8 +10,10 @@
     {% include "pages/partials/sidebar.html" %}
     {% include "pages/partials/topbar.html" %}
     {% include "pages/partials/navbar.html" %}
-    {% include "pages/partials/slider.html" %}
-    {% include "pages/partials/ads.html" %}
+
+    {% if not hide_slider %}
+        {% include "pages/partials/slider.html" %}
+    {% endif %}
 
     {% block content %}{% endblock %}
 

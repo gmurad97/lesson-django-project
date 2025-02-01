@@ -1,0 +1,39 @@
+{% extends "pages/layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="about-section mb-120 pt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="welcome-area text-center">
+                    <span>Welcome to Zorik :3</span>
+                    <p>
+                        [Peotic], your go-to destination for [describe the main focus or topics of the blog. Here, we strive to [describe the mission or purpose of the blog].
+                    </p>
+                </div>
+                <div class="about-content">
+                    <p>
+                        We love hearing from our readers! If you have any questions, comments, or suggestions, please don't hesitate to <a href="{% url 'contact' %}">Contact Us.</a> You can also connect with us on [social media platforms] to stay updated on the latest news, articles, and announcements from Zorik.
+                    </p>
+                    <p>
+                        Remember to customize this excerpt to reflect the specific focus, mission, and team behind your blog website. This will help provide visitors with a clear understanding of what your blog is about and why they should engage with it.
+                    </p>
+                    <p>
+                        And remember to customize this template to fit your specific blog site and its practices.Additionally, consider consulting with legal professionals to ensure compliance with elevant laws and regulations.
+                    </p>
+                    <p>
+                        For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at <a href="mailto:murad.dev@bk.ru">murad.dev@bk.ru</a>.
+                    </p>
+                </div>
+                <a href="{% url 'index' %}" class="start-reading-btn">
+                    Start To Reading
+                    <span>
+                        <i class="bi bi-chevron-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
