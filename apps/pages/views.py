@@ -25,7 +25,11 @@ def categories(request):
 
 
 def category(request, pk):
-    current_category = Category.objects.get(pk=pk)
+    try:
+        current_category = Category.objects.get(pk=pk)
+    except Category.DoesNotExist:
+        raise Http404()
+
     context = {
         "page_title": f"Category {current_category.name}",
         "categories_last": Category.objects.all()[:5],
@@ -33,6 +37,7 @@ def category(request, pk):
         "articles": Article.objects.filter(category__pk=pk),
         "hide_slider": True,
     }
+
     if context["articles"].exists():
         return render(request, "pages/category_articles.html", context)
     else:
@@ -49,13 +54,18 @@ def articles(request):
 
 
 def article(request, pk):
-    current_article = Article.objects.get(pk=pk)
+    try:
+        current_article = Article.objects.get(pk=pk)
+    except Article.DoesNotExist:
+        raise Http404("Article not found") 
+
     context = {
         "page_title": f"News - {current_article}",
         "categories_last": Category.objects.all()[:5],
         "current_article": current_article,
         "hide_slider": True,
     }
+
     return render(request, "pages/article.html", context)
 
 
@@ -108,6 +118,7 @@ def contact(request):
 def error_404(request, exception):
     context = {
         "page_title": "Page Not Found",
+        "categories_last": Category.objects.all()[:5],
         "hide_slider": True,
     }
     return render(request, "pages/error_404.html", context, status=404)
