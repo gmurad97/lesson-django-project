@@ -20,10 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-gfq=yla78j*(a=avd28i39-=7ub##%#q2!q=)s#r*l^&*4^tiy"
+SECRET_KEY = "django-insecure-yk-9%f4&kv!=+65=7qhz--!bc4we8gb#$&04d*#v@$w)61)iza"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 
@@ -123,11 +123,13 @@ if DEBUG:
 else:
     STATIC_ROOT = BASE_DIR / "staticfiles"
 
+
 # Media files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/topics/files/
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
