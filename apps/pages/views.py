@@ -4,8 +4,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, "pages/index.html", context={})
-
-
-def error_404(request, exception):
-    return render(request, "pages/index.html", context={})
+    context = {
+        "page_title": "Home",
+    }
+    return render(request, "pages/index.html", context)

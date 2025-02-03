@@ -1,0 +1,36 @@
+{% load static %}
+
+<div class="header-area d-lg-flex d-none">
+    <div class="container d-flex alingn-items-center justify-content-between">
+        <div class="header-logo">
+            <a href="{% url 'pages:home' %}">
+                <img alt="image" class="img-fluid dark" src="{% static 'pages/image/index-img/icon/dark-logo.svg' %}">
+            </a>
+            <a href="{% url 'pages:home' %}">
+                <img alt="image" class="img-fluid light" src="{% static 'pages/image/index-img/icon/light-logo.svg' %}">
+            </a>
+        </div>
+        <div class="header-right">
+            <ul class="social-media">
+                <li>
+                    <a target="_blank" href="https://www.instagram.com/gmurad97">
+                        IG
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.github.com/gmurad97">
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="3" cy="3" r="2.5" stroke="#545454" />
+                        </svg>
+                        GH
+                    </a>
+                </li>
+            </ul>
+            <ul class="icon-area">
+                <li class="tt-style-switch">
+                    <i class="bi bi-brightness-low-fill"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

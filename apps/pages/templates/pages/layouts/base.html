@@ -5,10 +5,18 @@
     {% include "pages/partials/head.html" %}
 </head>
 
-<body>
+<body id="body" class="background-img">
     {% include "pages/partials/scroll.html" %}
+    {% include "pages/partials/sidebar.html" %}
+    {% include "pages/partials/topbar.html" %}
+    {% include "pages/partials/navbar.html" %}
+    {% include "pages/partials/slider.html" %}
+    {% include "pages/partials/ads.html" %}
+
     {% block content %}{% endblock %}
 
+    {% include "pages/partials/footer.html" %}
+    {% include "pages/partials/scripts.html" %}
 </body>
 
 </html>
