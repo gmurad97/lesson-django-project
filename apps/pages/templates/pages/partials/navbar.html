@@ -1,3 +1,5 @@
+{% load static %}
+
 <header class="health">
     <div class="container-md">
         <div class="col-lg-12">
@@ -5,14 +7,14 @@
                 <div class="menu-wrap">
                     <div class="sidebar menu-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M1.66663 9.16669H18.3333V10.8334H1.66663V9.16669ZM1.66663 4.16669H18.3333V5.83335H1.66663V4.16669ZM1.66663 14.1667H18.3333V15.8334H1.66663V14.1667Z" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66663 9.16669H18.3333V10.8334H1.66663V9.16669ZM1.66663 4.16669H18.3333V5.83335H1.66663V4.16669ZM1.66663 14.1667H18.3333V15.8334H1.66663V14.1667Z" />
                         </svg>
                     </div>
                     <div class="main-menu d-xl-flex d-none">
                         <ul class="menu-list">
                             <li class="menu-item-has-children active">
-                                <a href="index.html#" class="drop-down">DEMO</a><i class="bi bi-plus dropdown-icon"></i>
+                                <a href="index.html#" class="drop-down">DEMO</a>
+                                <i class="bi bi-plus dropdown-icon"></i>
                                 <ul class="sub-menu">
                                     <li><a href="../index.html">Life Style</a></li>
                                     <li><a href="../travel/index.html">Travel</a></li>
@@ -28,7 +30,8 @@
                             <li><a href="health-and-wellness-category.html">HEALTH</a></li>
                             <li><a href="health-and-wellness-category.html">DISEASES</a></li>
                             <li class="menu-item-has-children">
-                                <a href="https://demo-egenslab.b-cdn.net/html/zorik/preview/health-and-wellness/life-style.html" class="drop-down"> FEATURES</a><i class="bi bi-plus dropdown-icon"></i>
+                                <a href="https://demo-egenslab.b-cdn.net/html/zorik/preview/health-and-wellness/life-style.html" class="drop-down">FEATURES</a>
+                                <i class="bi bi-plus dropdown-icon"></i>
                                 <ul class="sub-menu">
                                     <li><a href="about-us.html">About Us</a></li>
                                     <li>
@@ -58,7 +61,7 @@
                                     <li><a href="post-pagination.html">Post Pagination</a></li>
                                     <li><a href="only-for-subscriber.html">Only for subscriber</a></li>
                                     <li><a href="faq.html">FAQ's </a></li>
-                                    <li><a href="terms&amp;condition.html">Terms & Conditions </a></li>
+                                    <li><a href="terms-condition.html">Terms & Conditions </a></li>
                                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
                                     <li><a href="error.html">404</a></li>
                                 </ul>
@@ -68,16 +71,20 @@
                     </div>
                 </div>
                 <div class="header-logo d-lg-none d-flex">
-                    <a href="index.html"><img alt="image" class="img-fluid dark" src="../assets/image/index-img/icon/dark-logo.svg"></a>
-                    <a href="index.html"><img alt="image" class="img-fluid light" src="../assets/image/index-img/icon/light-logo.svg"></a>
+                    <a href="index.html">
+                        <img alt="image" class="img-fluid dark" src="{% static 'pages/image/index-img/icon/dark-logo.svg' %}">
+                    </a>
+                    <a href="index.html">
+                        <img alt="image" class="img-fluid light" src="{% static 'pages/image/index-img/icon/light-logo.svg' %}">
+                    </a>
                 </div>
                 <div class="nav-right d-md-flex d-none">
                     <a class="header-btn hover-btn two" href="index.html#">
                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9"
-                                 stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
-                        SUBSCRIBE</a>
+                        SUBSCRIBE
+                    </a>
                 </div>
             </div>
         </div>

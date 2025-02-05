@@ -1,5 +1,5 @@
 /*================================================
-Project Name: Zrik - Modern & Lightweight Blog Template
+Project Name: Zorik - Modern & Lightweight Blog Template
 Author: Egens Theme --> (https://www.egenstheme.com/)
 Support: https://www.account.egenslab.com/
 Developer: Khadija Tasnim --> hello@egenslab.com
@@ -4852,7 +4852,7 @@ header.podcast .header-wrapper .icon-area .search-bar .search-input {
 05. Banner section
 =================================================*/
 .banner-area {
-  padding-top: 70px;
+  /* padding-top: 70px; */
   position: relative;
   border-radius: 5px;
 }

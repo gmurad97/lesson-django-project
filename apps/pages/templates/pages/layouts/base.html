@@ -10,8 +10,14 @@
     {% include "pages/partials/sidebar.html" %}
     {% include "pages/partials/topbar.html" %}
     {% include "pages/partials/navbar.html" %}
-    {% include "pages/partials/slider.html" %}
-    {% include "pages/partials/ads.html" %}
+
+    {% if partials.with_slider %}
+        {% include "pages/partials/slider.html" %}
+    {% endif %}
+
+    {% if partials.with_ads %}
+        {% include "pages/partials/ads.html" %}
+    {% endif %}
 
     {% block content %}{% endblock %}
 
