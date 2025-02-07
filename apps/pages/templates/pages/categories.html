@@ -1,0 +1,27 @@
+{% extends "pages/layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="faq-page-wrap m-5">
+    <div class="container">
+        <div class="row justify-content-center g-lg-4 gy-5">
+            <div class="col-lg-12">
+                <div class="health-sidebar-area">
+                    <div class="single-widget powder-blue mb-30">
+                        <h6>Categories</h6>
+                        <ul class="category">
+                            {% for category in categories.all %}
+                            <li>
+                                <a href="{{ category.get_absolute_url }}">
+                                    {{ category.name }} ({{ category.article_count}})
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
