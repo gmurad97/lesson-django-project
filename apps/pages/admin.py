@@ -46,11 +46,37 @@ class SliderAdmin(admin.ModelAdmin):
 
 @admin.register(Advertising)
 class AdvertisingAdmin(admin.ModelAdmin):
-    def has_add_permission(self, request):
-        return not Setting.objects.exists()
+    list_display = (
+        "image_tag",
+        "__str__",
+        "created_at",
+        "updated_at",
+    )
+    list_display_links = ("__str__",)
+    readonly_fields = ("image_tag", "created_at", "updated_at")
 
-    def has_delete_permission(self, request, obj=None):
-        return False
+    fieldsets = (
+        ("Main Settings", {"fields": ("image", "status")}),
+        ("General Information", {"fields": ("image_tag", "created_at", "updated_at")}),
+    )
+
+    @admin.display(description="Image")
+    def image_tag(self, obj):
+        if obj.image:
+            return format_html(
+                "<a href='{}' data-lity><img style='width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:center center;' src='{}'></a>",
+                obj.image.url,
+                obj.image.url,
+            )
+
+    def has_add_permission(self, request):
+        return not Advertising.objects.exists()
+
+    class Media:
+        css = {
+            "all": ("pages/css/lity.min.css",),
+        }
+        js = ("pages/js/lity.min.js",)
 
 
 @admin.register(Faq)

@@ -12,31 +12,36 @@
         </div>
         <div class="header-right">
             <ul class="social-media">
-                <li><a href="#">FB</a></li>
+                {% if settings.github %}
                 <li>
-                    <a href="https://x.com/">
+                    <a href="{{ settings.github }}">
                         <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="3" cy="3" r="2.5" stroke="#545454" />
                         </svg>
-                        TW
+                        Github
                     </a>
                 </li>
+                {% endif %}
+                {% if settings.instagram %}
                 <li>
-                    <a href="https://www.linkedin.com/">
+                    <a href="{{ settings.instagram }}">
                         <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="3" cy="3" r="2.5" stroke="#545454" />
                         </svg>
-                        Lin
+                        Instagram
                     </a>
                 </li>
+                {% endif %}
+                {% if settings.linkedin %}
                 <li>
-                    <a href="https://www.instagram.com/">
+                    <a href="{{ settings.linkedin }}">
                         <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="3" cy="3" r="2.5" stroke="#545454" />
                         </svg>
-                        INs
+                        LinkedIn
                     </a>
                 </li>
+                {% endif %}
             </ul>
             <ul class="icon-area">
                 <li class="tt-style-switch">

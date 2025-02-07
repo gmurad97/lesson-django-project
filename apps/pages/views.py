@@ -1,6 +1,6 @@
 from django.db.models import Count
 from django.shortcuts import render
-from .models import Category, Article, Slider, Faq, Contact,Setting
+from .models import Category, Article, Slider, Faq, Contact, Setting, Advertising
 
 # Create your views here.
 
@@ -54,17 +54,20 @@ def categories(request):
 
     settings = Setting.objects.first()
 
+    advertising = Advertising.objects.first()
+
     context = {
         "page_title": "Categories",
         "partials": {
             "with_slider": False,
-            "with_ads": False,
+            "with_ads": True,
         },
         "categories": {
             "all": categories,
             "menu": categories_menu,
         },
-        "settings":settings
+        "settings": settings,
+        "ads": advertising,
     }
 
     return render(request, "pages/categories.html", context)
@@ -107,12 +110,15 @@ def contact(request):
 
 
 def faq(request):
+    faqs = Faq.objects.filter(status=True)
+
     context = {
         "page_title": "FAQ",
         "partials": {
             "with_slider": False,
             "with_ads": False,
         },
+        "faqs": faqs,
     }
 
     return render(request, "pages/faq.html", context)

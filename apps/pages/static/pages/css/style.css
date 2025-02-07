@@ -789,6 +789,9 @@ ul {
 .header-area .header-right .social-media li a:hover {
   color: var(--primary-green);
 }
+.social-media li:first-of-type a svg{
+  display: none;
+}
 .header-area .header-right .icon-area {
   display: flex;
   gap: 20px;

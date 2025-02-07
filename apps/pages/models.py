@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils.text import slugify
 from django.urls import reverse
 
 # Create your models here.
@@ -18,16 +17,6 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-
-    def save(self, *args, **kwargs):
-        if not self.slug or (
-            self.pk and self.name != Category.objects.get(pk=self.pk).name
-        ):
-            self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
-
-    def delete(self, *args, **kwargs):
-        super().delete(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse("pages:category_articles", kwargs={"category_slug": self.slug})
@@ -68,18 +57,6 @@ class Article(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self, *args, **kwargs):
-        if not self.slug or (
-            self.pk and self.title != Article.objects.get(pk=self.pk).title
-        ):
-            self.slug = slugify(self.title)
-        super().save(*args, **kwargs)
-
-    def delete(self, *args, **kwargs):
-        if self.poster and self.poster.name != "articles/default.png":
-            self.poster.delete(save=False)
-        super().delete(*args, **kwargs)
-
     def get_absolute_url(self):
         return reverse("pages:news_detail", kwargs={"article_slug": self.slug})
 
@@ -109,14 +86,6 @@ class Slider(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-
-    def delete(self, *args, **kwargs):
-        if self.poster and self.poster.name != "sliders/default.png":
-            self.poster.delete(save=False)
-        super().delete(*args, **kwargs)
-
     class Meta:
         verbose_name = "Slider"
         verbose_name_plural = "Sliders"
@@ -135,15 +104,7 @@ class Advertising(models.Model):
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Updated At")
 
     def __str__(self):
-        return str(self.status)
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-
-    def delete(self, *args, **kwargs):
-        if self.image:
-            self.image.delete(save=False)
-        super().delete(*args, **kwargs)
+        return "Advertising"
 
     class Meta:
         verbose_name = "Advertising"
@@ -160,12 +121,6 @@ class Faq(models.Model):
 
     def __str__(self):
         return self.question
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-
-    def delete(self, *args, **kwargs):
-        super().delete(*args, **kwargs)
 
     class Meta:
         verbose_name = "FAQ"
@@ -190,12 +145,6 @@ class Contact(models.Model):
     def __str__(self):
         return self.email
 
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-
-    def delete(self, *args, **kwargs):
-        super().delete(*args, **kwargs)
-
     class Meta:
         verbose_name = "Contact"
         verbose_name_plural = "Contacts"
@@ -212,12 +161,6 @@ class Setting(models.Model):
 
     def __str__(self):
         return "Site Settings"
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-
-    def delete(self, *args, **kwargs):
-        super().delete(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse("pages:home")
