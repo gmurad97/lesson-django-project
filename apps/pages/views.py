@@ -110,7 +110,7 @@ def contact(request):
 
 
 def faq(request):
-    faqs = Faq.objects.filter(status=True)
+    faqs = Faq.objects.filter(status=True) # tolko tut
 
     context = {
         "page_title": "FAQ",

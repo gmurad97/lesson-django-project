@@ -21,7 +21,6 @@ def delete_file(sender, instance, **kwargs):
 @receiver(pre_save, sender=Category)
 @receiver(pre_save, sender=Article)
 def update_slug(sender, instance, **kwargs):
-    if not instance.slug or (instance.pk and instance.name != instance.slug):
-        instance.slug = slugify(
-            instance.name if hasattr(instance, "name") else instance.title
-        )
+    title_field = instance.name if hasattr(instance, "name") else instance.title
+    if not instance.slug or (instance.pk and title_field != instance.slug):
+        instance.slug = slugify(title_field)
