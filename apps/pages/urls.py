@@ -5,6 +5,7 @@ app_name = "pages"
 
 urlpatterns = [
     path("", index, name="home"),
+    path("home/", home),
     path("news/", news, name="news_list"),
     path("news/<slug:article_slug>", news_detail, name="news_detail"),
     path("categories/", categories, name="categories_list"),

@@ -1,5 +1,6 @@
 {% load static %}
 
+{% if sliders %}
 <div class="banner-area my-5">
     <div class="container">
         <div class="row">
@@ -22,78 +23,25 @@
                 </div>
                 <div class="swiper home1-banner-slider">
                     <div class="swiper-wrapper">
+                        {% for slider in sliders %}
                         <div class="swiper-slide">
-                            <div class="helth-banner" style="background-image: url({% static 'pages/image/health-wellness/banner-imh.png' %});">
+                            <div class="helth-banner" style="background-image: url('{{ slider.poster.url }}');">
                                 <div class="banner-content">
-                                    <a href="health-and-wellness-category.html">
-                                        <span>Life Fitness</span>
+                                    <a href="{{ slider.link }}">
+                                        <span>{{ slider.title|truncatechars:50 }}</span>
                                     </a>
-                                    <h1>High-Intensity Workouts for Maximum Impact.</h1>
-                                    <div class="banner-content-bottom">
-                                        <div class="author-area">
-                                            <div class="author-img">
-                                                <img src="{% static 'pages/image/health-wellness/Image-10.png' %}" alt="">
-                                            </div>
-                                            <div class="author-name">
-                                                <a href="editor-profile.html">Dr. Daniel Scoot</a>
-                                            </div>
-                                        </div>
-                                        <div class="publish-date">
-                                            <a href="health-and-wellness-category.html">18 January, 2024</a>
-                                        </div>
+                                    <h1>{{ slider.description }}</h1>
+                                    <div class="publish-date">
+                                        <a href="javascript:void(0);">{{ slider.created_at }}</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="helth-banner" style="background-image: url({% static 'pages/image/health-wellness/banner-imh.png' %});">
-                                <div class="banner-content">
-                                    <a href="health-and-wellness-category.html">
-                                        <span>Meditation</span>
-                                    </a>
-                                    <h1>Mental Health Matters Breaking the Stigma.</h1>
-                                    <div class="banner-content-bottom">
-                                        <div class="author-area">
-                                            <div class="author-img">
-                                                <img src="{% static 'pages/image/health-wellness/Image-10.png' %}" alt="">
-                                            </div>
-                                            <div class="author-name">
-                                                <a href="editor-profile.html">Dr. Daniel Scoot</a>
-                                            </div>
-                                        </div>
-                                        <div class="publish-date">
-                                            <a href="health-and-wellness-category.html">18 January, 2024</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="helth-banner" style="background-image: url({% static 'pages/image/health-wellness/banner-imh.png' %});">
-                                <div class="banner-content">
-                                    <a href="health-and-wellness-category.html">
-                                        <span>Life Fitness</span>
-                                    </a>
-                                    <h1>Harnessing the Power of the Presen.</h1>
-                                    <div class="banner-content-bottom">
-                                        <div class="author-area">
-                                            <div class="author-img">
-                                                <img src="{% static 'pages/image/health-wellness/Image-10.png' %}" alt="">
-                                            </div>
-                                            <div class="author-name">
-                                                <a href="editor-profile.html">Dr. Daniel Scoot</a>
-                                            </div>
-                                        </div>
-                                        <div class="publish-date">
-                                            <a href="health-and-wellness-category.html">18 January, 2024</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+{% endif %}

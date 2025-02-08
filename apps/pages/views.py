@@ -1,21 +1,54 @@
+from django.http import Http404
 from django.db.models import Count
-from django.shortcuts import render
-from .models import Category, Article, Slider, Faq, Contact, Setting, Advertising
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from .models import *
 
 # Create your views here.
 
 
 def index(request):
+    advertising = Advertising.objects.first()
+    sliders = Slider.objects.filter(status=True)
+    categories = (
+        Category.objects.filter(status=True)
+        .annotate(article_count=Count("articles"))
+        .filter(article_count__gt=0)
+        .order_by("-created_at")
+    )
+    categories_last = categories[:7]
+    articles = Article.objects.filter(status=True)
+    articles_last = articles[:3]
+    settings = Setting.objects.first()
+
     context = {
         "page_title": "Home",
         "partials": {
             "with_slider": True,
             "with_ads": True,
         },
+        "sliders": sliders,
+        "ads": advertising,
+        "categories": {
+            "all": categories,
+            "last": categories_last,
+        },
+        "articles": {
+            "all": articles,
+            "last": articles_last,
+        },
+        "settings": settings,
     }
+
     return render(request, "pages/index.html", context)
 
 
+# rotter
+def home(request):
+    return redirect(reverse("pages:home"))
+
+
+# rotter
 def news(request):
     context = {
         "page_title": "News",
@@ -28,6 +61,7 @@ def news(request):
     return render(request, "pages/news.html", context)
 
 
+# rotter
 def news_detail(request, article_slug):
     context = {
         "page_title": "News -> ",
@@ -40,7 +74,7 @@ def news_detail(request, article_slug):
     return render(request, "pages/news_detail.html", context)
 
 
-# PREPARE
+# rotter
 def categories(request):
 
     categories = (
@@ -60,7 +94,7 @@ def categories(request):
         "page_title": "Categories",
         "partials": {
             "with_slider": False,
-            "with_ads": True,
+            "with_ads": False,
         },
         "categories": {
             "all": categories,
@@ -73,6 +107,7 @@ def categories(request):
     return render(request, "pages/categories.html", context)
 
 
+# rotter
 def category_articles(request, category_slug):
     context = {
         "page_title": "Categories ->",
@@ -85,6 +120,7 @@ def category_articles(request, category_slug):
     return render(request, "pages/category_articles.html", context)
 
 
+# rotter
 def about(request):
     context = {
         "page_title": "About",
@@ -97,6 +133,7 @@ def about(request):
     return render(request, "pages/about.html", context)
 
 
+# rotter
 def contact(request):
     context = {
         "page_title": "Contact",
@@ -109,8 +146,9 @@ def contact(request):
     return render(request, "pages/contact.html", context)
 
 
+# rotter
 def faq(request):
-    faqs = Faq.objects.filter(status=True) # tolko tut
+    faqs = Faq.objects.filter(status=True)  # tolko tut
 
     context = {
         "page_title": "FAQ",
@@ -124,6 +162,7 @@ def faq(request):
     return render(request, "pages/faq.html", context)
 
 
+# rotter
 def privacy(request):
     context = {
         "page_title": "Privacy Policy",
@@ -136,6 +175,7 @@ def privacy(request):
     return render(request, "pages/privacy.html", context)
 
 
+# rotter
 def terms(request):
     context = {
         "page_title": "Terms & Condition",
@@ -148,6 +188,7 @@ def terms(request):
     return render(request, "pages/terms.html", context)
 
 
+# rotter
 def error_404(request, exception):
     context = {
         "page_title": "Page Not Found",

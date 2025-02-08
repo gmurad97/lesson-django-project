@@ -4904,6 +4904,7 @@ header.podcast .header-wrapper .icon-area .search-bar .search-input {
   max-width: 580px;
   margin: 0 auto;
   padding-top: 25px;
+  word-wrap: break-word;
 }
 @media (max-width: 1399px) {
   .banner-area .banner-content h1 {

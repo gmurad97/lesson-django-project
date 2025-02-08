@@ -6,7 +6,7 @@
         <div class="row g-4">
             <div class="col-lg-12 d-flex justify-content-center">
                 <div class="add-image-section">
-                    <a target="_blank" href="https://www.github.com/gmurad97">
+                    <a target="{% if ads.link %}_blank{% else %}_parent{% endif %}" href="{{ ads.link|default:'javascript:void(0);' }}">
                         <img src="{{ ads.image.url }}" alt="Ads">
                     </a>
                 </div>
