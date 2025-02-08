@@ -12,20 +12,32 @@
                     </div>
                     <div class="main-menu d-xl-flex d-none">
                         <ul class="menu-list">
-                            <li><a href="{% url 'pages:home' %}">Home</a></li>
-                            <li><a href="{% url 'pages:news_list' %}">News</a></li>
-                            <li class="menu-item-has-children active">
+                            <li class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                                <a href="{% url 'pages:home' %}">Home</a>
+                            </li>
+                            <li class="{% if request.resolver_match.url_name == 'news_list' %}active{% endif %}">
+                                <a href="{% url 'pages:news_list' %}">News</a>
+                            </li>
+                            <li class="menu-item-has-children {% if '/categories/' in request.path %}active{% endif %}">
                                 <a href="{% url 'pages:categories_list' %}" class="drop-down">Categories</a>
                                 <i class="bi bi-plus dropdown-icon"></i>
                                 <ul class="sub-menu">
                                     {% for category in categories.last %}
-                                    <li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
+                                    <li class="{% if request.path == category.get_absolute_url %}active{% endif %}">
+                                        <a href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+                                    </li>
                                     {% endfor %}
                                 </ul>
                             </li>
-                            <li><a href="{% url 'pages:about' %}">About</a></li>
-                            <li><a href="{% url 'pages:contact' %}">Contact</a></li>
-                            <li><a href="{% url 'pages:faq' %}">Faq</a></li>
+                            <li class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                                <a href="{% url 'pages:about' %}">About</a>
+                            </li>
+                            <li class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                                <a href="{% url 'pages:contact' %}">Contact</a>
+                            </li>
+                            <li class="{% if request.resolver_match.url_name == 'faq' %}active{% endif %}">
+                                <a href="{% url 'pages:faq' %}">Faq</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

@@ -1,0 +1,55 @@
+{% extends "pages/layouts/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="blog-post m-5">
+    <div class="container">
+        <div class="row g-lg-4 gy-4">
+            <div class="col-lg-12">
+                <div class="row gy-5 m-3">
+                    {% for article in articles.all %}
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="blog-card3">
+                            <div class="blog-card-img">
+                                <a href="{{ article.get_absolute_url }}">
+                                    <img style="height: 222px;object-fit:cover;" src="{{ article.poster.url }}" alt="{{ article.title }}">
+                                </a>
+                            </div>
+                            <div class="blog-content2">
+                                <div class="blog-text">
+                                    <ul class="btn-area">
+                                        <li class="basic-btn">
+                                            <a class="{% if article.category.name == 'Breaking News' %}bg-danger{% endif %}" href="{{ article.category.get_absolute_url }}">{{ article.category }}</a>
+                                        </li>
+                                    </ul>
+                                    <h4 style="min-height: 64px;">
+                                        <a style="word-wrap: break-word;" href="{{ article.get_absolute_url }}">
+                                            {{ article.title|truncatechars:42 }}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="author-area">
+                                    <div class="author-img">
+                                        <a href="javascript:void(0);">
+                                            <img src="{% static 'pages/image/ai-technology/Image-59.png' %}" alt="Author Profile">
+                                        </a>
+                                    </div>
+                                    <div class="author-content">
+                                        <div class="author-name">
+                                            <a href="javascript:void(0);">Murad Gazymagomedov</a>
+                                        </div>
+                                        <div class="publish-date">
+                                            <a href="javascript:void(0);">{{ article.created_at }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

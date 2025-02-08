@@ -2284,6 +2284,7 @@ header.health .header-wrapper .main-menu ul > li ul.sub-menu > li:last-child {
 }
 header.health .header-wrapper .main-menu ul > li.active > a {
   border-color: var(--text-color);
+  color: var(--primary-green);
 }
 @media (max-width: 991px) {
   header.health .header-wrapper .main-menu ul > li.active > a {

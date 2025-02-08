@@ -114,7 +114,7 @@ class SliderAdmin(admin.ModelAdmin):
     readonly_fields = ("image_tag", "created_at", "updated_at")
 
     fieldsets = (
-        ("Main Settings", {"fields": ("title", "description", "link", "status")}),
+        ("Main Settings", {"fields": ("title", "description", "link","poster", "status")}),
         ("General Information", {"fields": ("image_tag", "created_at", "updated_at")}),
     )
 
