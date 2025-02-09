@@ -24,6 +24,7 @@ from apps.pages.views import error_404
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("apps.pages.urls", namespace="pages")),
+    path("", include("apps.posts.urls", namespace="posts")),
 ]
 
 handler404 = error_404
